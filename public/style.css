@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('fundo.jpg');
+    background-size: 110%; /* ligeiramente maior que 100% para permitir zoom/movimento */
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: moveBackground 40s ease-in-out infinite alternate;
+}
+
+/* Animação para mover o fundo */
+@keyframes moveBackground {
+    0% {
+        background-position: center;
+        background-size: 110%;
+    }
+    50% {
+        background-position: top left;
+        background-size: 115%;
+    }
+    100% {
+        background-position: bottom right;
+        background-size: 110%;
+    }
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 40px 30px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.login-container label {
+    display: block;
+    margin: 15px 0 5px;
+    text-align: left;
+    color: #f1f1f1;
+    font-size: 14px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+.login-container input::placeholder {
+    color: #e0e0e0;
+}
+
+.login-container button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #000000, #434343);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-container button:hover {
+    background: linear-gradient(to right, #434343, #000000); 
+}   
+
+.upload-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  gap: 10px;
+}
+
+.upload-form input[type="file"] {
+  /* Mantém o input file com altura padrão */
+  padding: 6px 10px;
+}
+
+.upload-form button {
+  width: 100%;
+  background: #e62117;
+  border: none;
+  color: white;
+  padding: 14px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.upload-form button:hover {
+  background: #b71b14;
+}
+
+/* Estilo aprimorado do chat */
+#chat-box {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 340px;
+  max-height: 450px;
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(60, 60, 60, 0.8));
+  color: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+  padding: 12px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(255, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+#chat-messages p {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 16px;
+  max-width: 80%;
+  word-wrap: break-word;
+  margin: 6px 0;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+#chat-messages p.user {
+  background: rgba(255, 0, 0, 0.3);
+  align-self: flex-end;
+  text-align: right;
+}
+
+#chat-messages p.bot {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ff7070;
+  align-self: flex-start;
+  text-align: left;
+}
+
+#chat-input {
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  margin-top: 10px;
+}
+
+#chat-send {
+  margin-top: 8px;
+  padding: 10px;
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#chat-send:hover {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
